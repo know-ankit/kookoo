@@ -1,12 +1,11 @@
 .page-wrapper {
-    background-image: url('../assets/wallpaper.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    position: absolute;
+    overflow: hidden;
+    position: fixed;
+    background-color: #00798e;
     height:100%;
     width:100%;
+    top:0;
+    left:0;
 }
 
 app-header, app-digital-clock {
@@ -19,6 +18,7 @@ app-header {
 
 app-digital-clock {
     justify-content: center;
+    
 }
 
 
