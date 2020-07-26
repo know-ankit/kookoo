@@ -7,7 +7,7 @@
     border-radius: 55px;
     width: 400px;
     height: 188px;
-    background-color:#FFFFFF;
+    background-color: var(--primary);
     padding: 100px;
     font-size: 30px;
     box-shadow: 0 22px 18px -18px rgb(49, 45, 45);
@@ -18,7 +18,7 @@
     height: 270px;
     width: 485px;
     flex-direction: column;
-    background-color: #00798e;
+    background-color: var(--bg);
     border-radius: 55px; 
 }
 
@@ -27,18 +27,17 @@
     justify-content: center;
     margin: auto;
     font-size: 154px;
-    color: #FFFFFF;
-
+    color: var(--primary);
 }
 
 #btnPlusHour, #btnMinusHour, #btnPlusMinute, #btnMinusMinute {
     position: absolute;
     font-size: 40px;
     cursor: pointer;
-    color: white;
+    color: var(--primary);
     height:50px;
     bottom:2px;
-    background-color: #00798e;
+    background-color: var(--bg);
     border: 0;
 }
 
@@ -57,34 +56,8 @@
 #btnMinusMinute {
     left: 380px;
 }
-
-.cancelButton, .setAlarmButton {
-    display:flex;
-    justify-content: center;
-    position: relative;
-    height: 100px;
-    width:300px;
-    margin:auto;
-    top:30px;
-    color:white;
-    background-color: #00798e;
-    align-items: center;
-    border-radius: 15px;
-    border: 10px solid #FFFFFF;
-    font-size: 30px;
-    font-family: 'Roboto', sans-serif;
-    cursor: pointer;
-}
-
-.alarmSetText{
-    color:#FFFFFF;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-}
-
 @media screen and (max-width: 700px) {
-    .digitalClock, .digitalTime {
+    .digitalClock, .setTime {
       float: none;
       width: 100%;
     }

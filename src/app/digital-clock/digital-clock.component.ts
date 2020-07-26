@@ -7,19 +7,15 @@ import { Component, OnInit} from '@angular/core';
 })
 export class DigitalClockComponent implements OnInit {
 
-  counter:number = 0;
-  alarmHours:number = 0;
-  alarmMinutes:number = 0;
   hoursOne:number = 0;
   hoursTwo:number = 0;
   minutesOne:number = 0;
   minutesTwo:number = 0;
+  counter:number = 0;
+  alarmHours:number = 0;
+  alarmMinutes:number = 0;
   timeValue:any;
-  alarmActive = false;
-  IsAlarmSet:boolean = true;
-  checkAlarmInterval: any;
-  soundPlaying:boolean = false;
-  audio = new Audio('./assets/Alarm-ringtone1.mp3');
+
   
   constructor() { }
   
@@ -80,53 +76,9 @@ export class DigitalClockComponent implements OnInit {
     const minuteValue = Math.floor(this.alarmMinutes/10);
     this.minutesOne = minuteValue;
     
-   const timeValue=this.alarmMinutes%10;
-   this.minutesTwo = this.alarmMinutes%10;
+    const timeValue=this.alarmMinutes%10;
+    this.minutesTwo = this.alarmMinutes%10;
 
   }
 
-  setAlarm() {
-    this.IsAlarmSet = false;
-    this.checkAlarmInterval = setInterval(()=> {
-      this.alarmInterval() }, 1000);
-    
-  }
-
-  startAudio() {
-    this.alarmActive = true;
-
-    if(!this.soundPlaying){
-      this.audio.load();
-      this.audio.play();
-      this.soundPlaying = true;
-    }
-
-  }
-
-  stopAudio() {
-    this.alarmActive = false;
-
-    if(this.soundPlaying){
-      this.audio.pause();
-      this.audio.currentTime = 0;
-      this.soundPlaying = false;
-    }
-  }
-  alarmInterval() {
-    var checkTime = new Date();
-	  var hours = checkTime.getHours();
-	  var minutes = checkTime.getMinutes();
-    
-	  if ((hours == this.alarmHours) && (minutes == this.alarmMinutes)){
-      this.IsAlarmSet = true;
-      this.startAudio();
-      this.alarmActive = true;
-      clearInterval(this.checkAlarmInterval);
-	}
-  }
-
-  setAlarmStatus() {
-    this.IsAlarmSet = false;
-    this.alarmActive = false;
-  }
 }

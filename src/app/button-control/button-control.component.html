@@ -1,0 +1,7 @@
+<button *ngIf="IsAlarmSet" class="setAlarmButton" (click)="setAlarm()">
+    SET ALARM
+</button>
+<div *ngIf="!IsAlarmSet" id="alarmSet">
+    <h1 class="alarmSetText">Alarm is set!</h1>
+    <button class="cancelButton" (click)="setAlarmStatus()">Cancel</button>
+</div>
