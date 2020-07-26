@@ -1,18 +1,13 @@
 <div class="page-wrapper">
     <div class="clock-container">
-        <div class="currentTime">
-            <div class="hour">{{hour}} : </div>
-            <div class="minute">{{minute}} : </div>
-            <div class="second">{{second}} </div>
-            <div class="ampm">{{AMPM}}</div>
-        </div>
+        <app-current-time></app-current-time>
         <div class="digitalClock">
             <div class="setTime">
-                <div id="hoursOne" class="digit">{{hoursOne}}</div>
-                <div id="hoursTwo" class="digit">{{hoursTwo}}</div>
+                <div id="hoursOne" class="digit" [(ngModel)]="hoursOne">{{hoursOne}}</div>
+                <div id="hoursTwo" class="digit" [(ngModel)]="hoursTwo">{{hoursTwo}}</div>
                 <div id="divider">:</div>
-                <div id="minutesOne" class="digit">{{minutesOne}}</div>
-                <div id="minutesTwo" class="digit">{{minutesTwo}}</div>
+                <div id="minutesOne" class="digit" [(ngModel)]="minutesOne">{{minutesOne}}</div>
+                <div id="minutesTwo" class="digit" [(ngModel)]="minutesTwo">{{minutesTwo}}</div>
             </div>
         </div>
         <div class="plus-minus-buttons">        

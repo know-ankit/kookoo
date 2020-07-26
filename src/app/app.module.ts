@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { DigitalClockComponent } from './digital-clock/digital-clock.component';
 import 'boxicons';
+import { CurrentTimeComponent } from './current-time/current-time.component';
 
 
 
@@ -13,11 +14,13 @@ import 'boxicons';
   declarations: [
     AppComponent,
     HeaderComponent,
-    DigitalClockComponent
+    DigitalClockComponent,
+    CurrentTimeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
    
   ],
   providers: [],

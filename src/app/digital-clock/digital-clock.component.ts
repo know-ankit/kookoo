@@ -6,10 +6,7 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./digital-clock.component.scss']
 })
 export class DigitalClockComponent implements OnInit {
-  public hour: number;
-  public minute: string;
-  public second: string;
-  public AMPM: string;
+
   counter:number = 0;
   alarmHours:number = 0;
   alarmMinutes:number = 0;
@@ -26,27 +23,12 @@ export class DigitalClockComponent implements OnInit {
   
   constructor() { }
   
-  ngOnInit(): void {
-    setInterval(()=> {
-      const date = new Date();
-      this.updateDate(date);
-    }, 1000);
-    
-}
+  ngOnInit(): void{
 
-  private updateDate(date:Date) {
-    const hours = date.getHours();
-    this.AMPM = hours >= 12 ? 'PM': 'AM';
-    this.hour = hours < 23 ?  hours : hours;
-
-    const minutes = date.getMinutes();
-    this.minute = minutes < 10 ? '0' + minutes : minutes.toString(); 
-
-    const seconds = date.getSeconds();
-    this.second = seconds < 10 ? '0' + seconds : seconds.toString();
   }
-  
-  hourIncrement(){
+
+  hourIncrement() {
+
     if(this.counter > 1 || this.counter == 0){
       this.alarmHours++;
       if (this.alarmHours > 23) this.alarmHours = 0;
@@ -54,9 +36,9 @@ export class DigitalClockComponent implements OnInit {
     }
     this.counter++;
   }
+  
+  hourDecrement() {
 
-
-  hourDecrement(){
     if(this.counter > 1 || this.counter==0){
       this.alarmHours--;
 
@@ -67,7 +49,7 @@ export class DigitalClockComponent implements OnInit {
     this.counter++;
   }
 
-  minuteIncrement(){
+  minuteIncrement() {
     this.counter =0;
 
     if(this.counter > 1 || this.counter==0){
@@ -80,7 +62,7 @@ export class DigitalClockComponent implements OnInit {
     this.counter++;
   }
 
-  minuteDecrement(){
+  minuteDecrement() {
     this.alarmMinutes--;
 
     if (this.alarmMinutes < 0) this.alarmMinutes = 59;
@@ -130,7 +112,7 @@ export class DigitalClockComponent implements OnInit {
       this.soundPlaying = false;
     }
   }
-  alarmInterval(){
+  alarmInterval() {
     var checkTime = new Date();
 	  var hours = checkTime.getHours();
 	  var minutes = checkTime.getMinutes();
@@ -143,7 +125,7 @@ export class DigitalClockComponent implements OnInit {
 	}
   }
 
-  setAlarmStatus(){
+  setAlarmStatus() {
     this.IsAlarmSet = false;
     this.alarmActive = false;
   }

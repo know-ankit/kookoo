@@ -1,0 +1,17 @@
+.currentTime {
+    display:flex;
+    top:0;
+    right:0;
+    margin-top:10px;
+    position:absolute;
+    color: var(--bg);
+}
+
+.hour, .minute, .second {
+    padding-right: 10px;
+}
+
+.ampm {
+    margin-right: 10px;;
+    font-size: 30px;
+}
