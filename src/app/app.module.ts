@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { DigitalClockComponent } from './digital-clock/digital-clock.component';
 import 'boxicons';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
