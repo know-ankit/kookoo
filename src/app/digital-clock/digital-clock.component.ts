@@ -95,7 +95,6 @@ export class DigitalClockComponent implements OnInit {
     const hourValue=this.alarmHours%10;
     this.hoursTwo = hourValue;
     
-    else $('#hours_two');
     const minuteValue = Math.floor(this.alarmMinutes/10);
     this.minutesOne = minuteValue;
     
