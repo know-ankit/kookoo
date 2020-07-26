@@ -1,7 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 
-declare var $: any;
-
 @Component({
   selector: 'app-digital-clock',
   templateUrl: './digital-clock.component.html',
@@ -15,10 +13,10 @@ export class DigitalClockComponent implements OnInit {
   counter:number = 0;
   alarmHours:number = 0;
   alarmMinutes:number = 0;
-  hours_one:number = 0;
-  hours_two:number = 0;
-  minutes_one:number = 0;
-  minutes_two:number = 0;
+  hoursOne:number = 0;
+  hoursTwo:number = 0;
+  minutesOne:number = 0;
+  minutesTwo:number = 0;
   timeValue:any;
   alarmActive = false;
   IsAlarmSet:boolean = true;
@@ -91,31 +89,18 @@ export class DigitalClockComponent implements OnInit {
   }
   
   updateAlarmTime() {
-
-   this.timeValue=Math.floor(this.alarmHours/10);
-   $('#hours_one').text(this.timeValue);
-
-		if(this.timeValue == "1") $('#hours_one');
-    else $('#hours_one');
     
-		this.timeValue=this.alarmHours%10;
-    $('#hours_two').text(this.timeValue);
+    this.timeValue=Math.floor(this.alarmHours/10);
+    this.hoursOne = this.timeValue;
+    const hourValue=this.alarmHours%10;
+    this.hoursTwo = hourValue;
     
-		if(this.timeValue == "1") $('#hours_two');
     else $('#hours_two');
-
-
-    this.timeValue=Math.floor(this.alarmMinutes/10);
-    $('#minutes_one').text(this.timeValue);
-
-    if(this.timeValue == "1") $('#minutes_one');
-    else $('#minutes_one');
+    const minuteValue = Math.floor(this.alarmMinutes/10);
+    this.minutesOne = minuteValue;
     
-    const timeValue=this.alarmMinutes%10;
-    $('#minutes_two').text(timeValue);
-
-		if(this.timeValue == "1") $('#minutes_two');
-    else $('#minutes_two');
+   const timeValue=this.alarmMinutes%10;
+   this.minutesTwo = this.alarmMinutes%10;
 
   }
 
@@ -150,14 +135,12 @@ export class DigitalClockComponent implements OnInit {
     var checkTime = new Date();
 	  var hours = checkTime.getHours();
 	  var minutes = checkTime.getMinutes();
-	  console.log( "hoursNow:" + hours);
-    console.log( "minutesNow:" + minutes);
     
 	  if ((hours == this.alarmHours) && (minutes == this.alarmMinutes)){
       this.IsAlarmSet = true;
       this.startAudio();
-		this.alarmActive = true;
-		clearInterval(this.checkAlarmInterval);
+      this.alarmActive = true;
+      clearInterval(this.checkAlarmInterval);
 	}
   }
 
