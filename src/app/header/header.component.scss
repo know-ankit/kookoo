@@ -8,8 +8,11 @@ header {
 }
 
 .title h1 {
-    color: rgb(145, 15, 15);
-    font-size:20px; 
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+    color: #ffffff;
+    font-size:30px; 
     font-family: 'Roboto', sans-serif;
 }
 
@@ -19,6 +22,3 @@ header {
       width: 100%;
     }
   }
-
-
-

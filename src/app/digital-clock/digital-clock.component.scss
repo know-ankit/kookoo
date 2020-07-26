@@ -4,21 +4,22 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    border-radius: 25px;
-    width: 350px;
-    height: 180px;
-    background-color: #060502;
+    border-radius: 55px;
+    width: 400px;
+    height: 188px;
+    background-color:#FFFFFF;
     padding: 100px;
     font-size: 30px;
+    box-shadow: 0 22px 18px -18px rgb(49, 45, 45);
 }
 .digitalClock {
     position: absolute;
-    width: 350px;
-    height: 175px;
     display: flex;
+    height: 270px;
+    width: 485px;
     flex-direction: column;
-    background-color: white;
-    border-radius: 25px;  
+    background-color: #00798e;
+    border-radius: 55px; 
 }
 
 .currentTime {
@@ -28,14 +29,16 @@
     right:0;
     margin-top:10px;
     position:absolute;
-    color:white;
+    color:#00798e;
 
 }
 
 .setTime {
-    display:flex;
+    display: flex;
     justify-content: center;
-    font-size: 130px;
+    margin: auto;
+    font-size: 154px;
+    color: #FFFFFF;
 
 }
 
@@ -49,48 +52,34 @@
     font-size: 20px;
 }
 
-.plus-minus-buttons {
-    display: flex;
-    font-size: 100px;
-    justify-content: end;
-    margin-top: 255px;
-    padding: 30px;
+#btnPlusHour, #btnMinusHour, #btnPlusMinute, #btnMinusMinute {
+    position: absolute;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
     height:50px;
+    bottom:2px;
+    background-color: #00798e;
+    border: 0;
+    
 }
 
 #btnPlusHour {
-    position: absolute;
-    top: 280px;
-    left: 130px;
-    font-size: 40px;
-    cursor: pointer;
+    left: 115px;
 }
 
 #btnMinusHour {
-    position: absolute;
-    top: 280px;
-    left: 210px;
-    font-size: 40px;
-    cursor: pointer;
+    left: 195px;
 }
 
 #btnPlusMinute {
-    position: absolute;
-    top: 280px;
-    left: 330px;
-    font-size: 40px;
-    cursor: pointer;
-
+    left: 300px;
 }
 
 #btnMinusMinute {
-    position: absolute;
-    top: 280px;
-    left: 410px;
-    font-size: 40px;
-    cursor: pointer;
-
+    left: 380px;
 }
+
 
 .cancelButton, .setAlarmButton {
     display:flex;
@@ -101,12 +90,20 @@
     margin:auto;
     top:30px;
     color:white;
-    background-color:  #060502;
+    background-color: #00798e;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 15px;
+    border: 10px solid #FFFFFF;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
+}
+
+.alarmSetText{
+    color:#FFFFFF;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 700px) {
