@@ -24,7 +24,7 @@ export class DigitalClockComponent implements OnInit {
   IsAlarmSet:boolean = true;
   checkAlarmInterval: any;
   soundPlaying:boolean = false;
-  audio = new Audio('./assets/Alarm-ringtone.mp3');
+  audio = new Audio('./assets/Alarm-ringtone1.mp3');
 
 
 
