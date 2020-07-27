@@ -1,0 +1,30 @@
+.page-wrapper{
+    display:flex;
+    flex-direction: column;
+}
+#btnPlusHour, #btnMinusHour, #btnPlusMinute, #btnMinusMinute {
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--primary);
+    height:60px;
+    top:490px;
+    background-color: var(--bg);
+    border: 0;
+}
+
+#btnPlusHour {
+    left: 160px;
+}
+
+#btnMinusHour {
+    left: 225px;
+}
+
+#btnPlusMinute {
+    left: 445px;
+}
+
+#btnMinusMinute {
+    left: 510px;
+}
+

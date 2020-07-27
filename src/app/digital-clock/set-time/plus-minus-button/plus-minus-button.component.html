@@ -1,0 +1,11 @@
+<div class="page-wrapper">
+     <div class="plus-minus-buttons">        
+         <button id="btnPlusHour" class="clockButton" (click)="hourIncrement()"><i class='bx bxs-plus-square'></i></button>
+         <button id="btnMinusHour" class="clockButton" (click)="hourDecrement()" ><i class='bx bxs-minus-square' ></i></button>
+         <button id="btnPlusMinute" class="clockButton" (click)="minuteIncrement()"><i class='bx bxs-plus-square'></i></button>
+         <button id="btnMinusMinute" class="clockButton" (click)="minuteDecrement()"><i class='bx bxs-minus-square' ></i></button>
+     </div>
+     <div>
+         <app-button-control [alarmHours]="alarmHours" [alarmMinutes]="alarmMinutes"></app-button-control>
+    </div>
+</div>

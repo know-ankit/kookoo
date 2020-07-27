@@ -1,13 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button-control',
   templateUrl: './button-control.component.html',
   styleUrls: ['./button-control.component.scss']
 })
-export class ButtonControlComponent implements OnInit {
-
-  
+export class ButtonControlComponent {
   @Input() alarmHours:number;
   @Input() alarmMinutes:number;
   alarmActive = false;
@@ -18,9 +16,6 @@ export class ButtonControlComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-  
   setAlarm() {
   
     this.IsAlarmSet = false;
@@ -51,7 +46,7 @@ export class ButtonControlComponent implements OnInit {
   }
 
   alarmInterval() {
-    
+    debugger
     var checkTime = new Date();
 	  var hours = checkTime.getHours();
     var minutes = checkTime.getMinutes();
