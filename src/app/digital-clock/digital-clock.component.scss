@@ -1,23 +1,25 @@
 .clock-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     border-radius: 55px;
     width: 400px;
-    height: 188px;
-    background-color: var(--primary);
-    padding: 100px;
+    height: 200px;
+    // background-color: var(--primary);
+    padding: 80px;
     font-size: 30px;
-    box-shadow: 0 22px 18px -18px rgb(49, 45, 45);
+    box-shadow: 0 26px 55px 10px #312d2d;
 }
-.digitalClock {
-    position: absolute;
+
+app-current-time {
     display: flex;
-    height: 270px;
-    width: 485px;
-    flex-direction: column;
-    background-color: var(--bg);
-    border-radius: 55px; 
+    justify-content: flex-end;
+    position: relative;
+    top: -60px;
 }
+
+app-set-time {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    top:-2rem;
+}
+
 

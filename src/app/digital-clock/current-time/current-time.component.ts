@@ -24,7 +24,7 @@ export class CurrentTimeComponent implements OnInit {
     const hours = date.getHours();
     this.AMPM = hours >= 12 ? 'PM': 'AM';
     this.hour = hours < 23 ?  hours : hours;
-
+    
     const minutes = date.getMinutes();
     this.minute = minutes < 10 ? '0' + minutes : minutes.toString(); 
 

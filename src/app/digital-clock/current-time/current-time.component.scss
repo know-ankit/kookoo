@@ -1,10 +1,6 @@
 .currentTime {
     display:flex;
-    top:0;
-    right:0;
-    margin-top:10px;
-    position:absolute;
-    color: var(--bg);
+    color: var(--primary);
 }
 
 .hour, .minute, .second {

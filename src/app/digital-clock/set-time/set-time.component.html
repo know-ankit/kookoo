@@ -1,12 +1,15 @@
-<div class="setTime">
-    <div id="hoursOne" class="digit" >{{hoursOne}}</div>
-    <div id="hoursTwo" class="digit" >{{hoursTwo}}</div>
-    <div id="divider">:</div>
-    <div id="minutesOne" class="digit" >{{minutesOne}}</div>
-    <div id="minutesTwo" class="digit" >{{minutesTwo}}</div>
+<div class="page-wrapper">
+    <div class="setTime">
+        <div id="hoursOne" class="digit" >{{hoursOne}}</div>
+        <div id="hoursTwo" class="digit" >{{hoursTwo}}</div>
+        <div id="divider">:</div>
+        <div id="minutesOne" class="digit" >{{minutesOne}}</div>
+        <div id="minutesTwo" class="digit" >{{minutesTwo}}</div>
+    </div>
+    <div>
+        <app-plus-minus-button  (eventHourOne)= "updateHourOne($event)"
+        (eventHourTwo)= "updateHourTwo($event)" (eventMinuteOne)= "updateMinuteOne($event)"
+        (eventMinuteTwo)= "updateMinuteTwo($event)"></app-plus-minus-button>
+    </div>
 </div>
-<app-plus-minus-button  (eventHourOne)= "updateHourOne($event)"
- (eventHourTwo)= "updateHourTwo($event)" (eventMinuteOne)= "updateMinuteOne($event)"
- (eventMinuteTwo)= "updateMinuteTwo($event)"></app-plus-minus-button>
-
 

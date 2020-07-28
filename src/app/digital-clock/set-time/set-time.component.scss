@@ -2,6 +2,12 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    font-size: 154px;
+    font-size: 10rem;
     color: var(--primary);
+}
+
+app-plus-minus-button {
+    display:flex;
+    justify-content: center;
+    margin-top:2rem;
 }
