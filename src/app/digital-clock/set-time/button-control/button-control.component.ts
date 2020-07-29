@@ -15,7 +15,6 @@ export class ButtonControlComponent {
   audio = new Audio('./assets/Alarm-ringtone1.mp3');
   
   setAlarm() {
-  
     this.IsAlarmSet = false;
     this.checkAlarmInterval = setInterval(()=> {
     this.alarmInterval() }, 1000);
