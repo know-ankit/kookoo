@@ -12,25 +12,24 @@ export class SetTimeComponent {
   minutesTwo:number = 0;
   alarmHours:number = 0;
   alarmMinutes:number = 0;
+  
+  updateHourOne(number) {
 
- updateHourOne(number) {
+    this.hoursOne = number;
+  }
 
-  this.hoursOne = number;
-}
+  updateHourTwo(number) {
+    
+    this.hoursTwo = number;
+  }
 
-updateHourTwo(number) {
-   
-  this.hoursTwo = number;
-}
+  updateMinuteOne(number) {
+    
+    this.minutesOne = number;
+  }
 
-updateMinuteOne(number) {
-   
-  this.minutesOne = number;
-}
-
-updateMinuteTwo(number) {
-   
-  this.minutesTwo = number;
-}
-
-}
+  updateMinuteTwo(number) {
+    
+    this.minutesTwo = number;
+  }
+  }

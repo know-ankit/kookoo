@@ -6,20 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./current-time.component.scss']
 })
 export class CurrentTimeComponent implements OnInit {
-
   public hour: number;
   public minute: string;
   public second: string;
   public AMPM: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+ ngOnInit(): void {
     setInterval(()=> {
       const date = new Date();
       this.updateDate(date);
     }, 1000);
   }
+  
   updateDate(date: Date) {
     const hours = date.getHours();
     this.AMPM = hours >= 12 ? 'PM': 'AM';

@@ -13,9 +13,7 @@ export class ButtonControlComponent {
   checkAlarmInterval: any;
   soundPlaying:boolean = false;
   audio = new Audio('./assets/Alarm-ringtone1.mp3');
-
-  constructor() { }
-
+  
   setAlarm() {
   
     this.IsAlarmSet = false;
@@ -50,9 +48,8 @@ export class ButtonControlComponent {
     var checkTime = new Date();
 	  var hours = checkTime.getHours();
     var minutes = checkTime.getMinutes();
-
-
-	  if ((hours == this.alarmHours) && (minutes == this.alarmMinutes )){
+    
+    if ((hours == this.alarmHours) && (minutes == this.alarmMinutes )){
 
       this.IsAlarmSet = true;
       this.startAudio();
