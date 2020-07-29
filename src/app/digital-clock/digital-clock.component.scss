@@ -1,114 +1,24 @@
 .clock-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
     border-radius: 55px;
     width: 400px;
-    height: 188px;
-    background-color:#FFFFFF;
-    padding: 100px;
+    height: 200px;
+    padding: 80px;
     font-size: 30px;
-    box-shadow: 0 22px 18px -18px rgb(49, 45, 45);
+    box-shadow: 0 26px 55px 10px #312d2d;
 }
-.digitalClock {
-    position: absolute;
+
+app-current-time {
     display: flex;
-    height: 270px;
-    width: 485px;
-    flex-direction: column;
-    background-color: #00798e;
-    border-radius: 55px; 
-}
-
-.currentTime {
-    display:flex;
-    flex-direction:row;
-    top:0;
-    right:0;
-    margin-top:10px;
-    position:absolute;
-    color:#00798e;
-
-}
-
-.setTime {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    font-size: 154px;
-    color: #FFFFFF;
-
-}
-
-.hour, .minute, .second {
-    padding-right: 10px;
-}
-
-.ampm {
-    margin-top: 10px;
-    margin-right: 10px;;
-    font-size: 20px;
-}
-
-#btnPlusHour, #btnMinusHour, #btnPlusMinute, #btnMinusMinute {
-    position: absolute;
-    font-size: 40px;
-    cursor: pointer;
-    color: white;
-    height:50px;
-    bottom:2px;
-    background-color: #00798e;
-    border: 0;
-    
-}
-
-#btnPlusHour {
-    left: 115px;
-}
-
-#btnMinusHour {
-    left: 195px;
-}
-
-#btnPlusMinute {
-    left: 300px;
-}
-
-#btnMinusMinute {
-    left: 380px;
-}
-
-
-.cancelButton, .setAlarmButton {
-    display:flex;
-    justify-content: center;
+    justify-content: flex-end;
     position: relative;
-    height: 100px;
-    width:300px;
-    margin:auto;
-    top:30px;
-    color:white;
-    background-color: #00798e;
-    align-items: center;
-    border-radius: 15px;
-    border: 10px solid #FFFFFF;
-    font-size: 30px;
-    font-family: 'Roboto', sans-serif;
-    cursor: pointer;
+    top: -60px;
 }
 
-.alarmSetText{
-    color:#FFFFFF;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
+app-set-time {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    top:-2rem;
 }
 
-@media screen and (max-width: 700px) {
-    .digitalClock, .digitalTime {
-      float: none;
-      width: 100%;
-    }
-  }
+

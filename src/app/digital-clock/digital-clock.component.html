@@ -1,35 +1,8 @@
-<div class="page-wrapper">
-    <div class="clock-container">
-        <div class="currentTime">
-            <div class="hour">{{hour}} : </div>
-            <div class="minute">{{minute}} : </div>
-            <div class="second">{{second}} </div>
-            <div class="ampm">{{AMPM}}</div>
-        </div>
-        <div class="digitalClock">
-            <div class="setTime">
-                <div id="hoursOne" class="digit">{{hoursOne}}</div>
-                <div id="hoursTwo" class="digit">{{hoursTwo}}</div>
-                <div id="divider">:</div>
-                <div id="minutesOne" class="digit">{{minutesOne}}</div>
-                <div id="minutesTwo" class="digit">{{minutesTwo}}</div>
-            </div>
-        </div>
-        <div class="plus-minus-buttons">        
-            <button id="btnPlusHour" class="clockButton" (click)="hourIncrement()"><i class='bx bxs-plus-square'></i></button>
-            <button id="btnMinusHour" class="clockButton" (click)="hourDecrement()" ><i class='bx bxs-minus-square' ></i></button>
-            <button id="btnPlusMinute" class="clockButton" (click)="minuteIncrement()"><i class='bx bxs-plus-square'></i></button>
-            <button id="btnMinusMinute" class="clockButton" (click)="minuteDecrement()"><i class='bx bxs-minus-square' ></i></button>
-        </div>
-    
+<div class="clock-container">
+    <div>
+        <app-current-time></app-current-time>
     </div>
-    <button *ngIf="IsAlarmSet" class="setAlarmButton" (click)="setAlarm()">
-        SET ALARM
-    </button>
-    <div *ngIf="!IsAlarmSet" id="alarmSet">
-        <h1 class="alarmSetText">Alarm is set!</h1>
-        <button class="cancelButton" (click)="setAlarmStatus()">Cancel</button>
+    <div>
+        <app-set-time></app-set-time>
     </div>
-  
 </div>
-
