@@ -43,7 +43,6 @@ export class ButtonControlComponent {
   }
 
   alarmInterval() {
-    debugger
     var checkTime = new Date();
 	  var hours = checkTime.getHours();
     var minutes = checkTime.getMinutes();
