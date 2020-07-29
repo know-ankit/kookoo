@@ -5,9 +5,23 @@
     cursor: pointer;
 }
 
-button {
-    margin:2px;
-    padding:5px;
-    top:-2rem;
+.plus-hour-button, .minus-hour-button, .plus-minute-button, .minus-minute-button {
+    position: relative;
+    background-color: var(--primary);
+    border: 0;
+}
+.plus-hour-button {
+    right:10px;
 }
 
+.minus-hour-button {
+    left:10px;
+}
+
+.plus-minute-button {
+    left:80px;
+}
+
+.minus-minute-button {
+    left: 100px;
+}
