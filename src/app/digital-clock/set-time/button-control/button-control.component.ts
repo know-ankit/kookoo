@@ -9,9 +9,9 @@ export class ButtonControlComponent {
   @Input() alarmHours:number;
   @Input() alarmMinutes:number;
   alarmActive = false;
-  IsAlarmSet:boolean = true;
+  IsAlarmSet = true;
   checkAlarmInterval: any;
-  soundPlaying:boolean = false;
+  soundPlaying = false;
   audio = new Audio('./assets/Alarm-ringtone1.mp3');
   
   setAlarm() {
@@ -43,7 +43,6 @@ export class ButtonControlComponent {
   }
 
   alarmInterval() {
-    debugger
     var checkTime = new Date();
 	  var hours = checkTime.getHours();
     var minutes = checkTime.getMinutes();

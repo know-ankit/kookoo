@@ -6,12 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./set-time.component.scss']
 })
 export class SetTimeComponent {
-  hoursOne:number = 0;
-  hoursTwo:number = 0;
-  minutesOne:number = 0;
-  minutesTwo:number = 0;
-  alarmHours:number = 0;
-  alarmMinutes:number = 0;
+  hoursOne = 0; 
+  hoursTwo = 0;
+  minutesOne = 0;
+  minutesTwo = 0;
+  alarmHours = 0;
+  alarmMinutes = 0;
   
   updateHourOne(number) {
 
@@ -32,4 +32,4 @@ export class SetTimeComponent {
     
     this.minutesTwo = number;
   }
-  }
+}

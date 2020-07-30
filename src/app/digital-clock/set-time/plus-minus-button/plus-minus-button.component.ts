@@ -10,22 +10,24 @@ export class PlusMinusButtonComponent   {
   @Input() hoursTwo:number;
   @Input() minutesOne:number;
   @Input() minutesTwo:number;
-  counter:number = 0;
-  alarmHours:number = 0;
-  alarmMinutes:number = 0;
-
- @Output() eventHourOne = new EventEmitter();
- @Output() eventHourTwo = new EventEmitter();
- @Output() eventMinuteOne = new EventEmitter();
- @Output() eventMinuteTwo = new EventEmitter();
- 
-
+  counter = 0;
+  alarmHours = 0;
+  alarmMinutes = 0;
+  
+  @Output() eventHourOne = new EventEmitter();
+  @Output() eventHourTwo = new EventEmitter();
+  @Output() eventMinuteOne = new EventEmitter();
+  @Output() eventMinuteTwo = new EventEmitter();
+  
   hourIncrement() {
+
     if(this.counter > 1 || this.counter == 0){
       this.alarmHours++;
+
       if (this.alarmHours > 23) this.alarmHours = 0;
       this.updateAlarmTime();
     }
+
     this.counter++;
   }
   
@@ -58,8 +60,8 @@ export class PlusMinusButtonComponent   {
     this.alarmMinutes--;
 
     if (this.alarmMinutes < 0) this.alarmMinutes = 59;
-    this.updateAlarmTime();
 
+    this.updateAlarmTime();
   }
   
   updateAlarmTime() {
@@ -79,7 +81,5 @@ export class PlusMinusButtonComponent   {
     const minuteValueTwo=this.alarmMinutes%10;
     this.minutesTwo = minuteValueTwo;
     this.eventMinuteTwo.emit(minuteValueTwo);
-
-    
   }
 }
