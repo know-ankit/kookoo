@@ -1,10 +1,30 @@
 <div class="page-wrapper">
     <div class="setTime">
-        <div id="hoursOne" class="digit" >{{hoursOne}}</div>
-        <div id="hoursTwo" class="digit" >{{hoursTwo}}</div>
-        <div id="divider">:</div>
-        <div id="minutesOne" class="digit" >{{minutesOne}}</div>
-        <div id="minutesTwo" class="digit" >{{minutesTwo}}</div>
+        <div class="day-container">
+            <div class="day">{{day}}</div>
+            <div class="Day">DAY</div>
+        </div>
+        <div class="divider">:</div>
+        <div class="hour-container">
+            <div class="hour-digit">
+                <div id="hoursOne" class="digit" >{{hoursOne}}</div>
+                <div id="hoursTwo" class="digit" >{{hoursTwo}}</div>
+            </div>
+            <div class="Hours">HOURS</div>
+        </div>
+        <div class="divider">:</div>
+        <div class="minute-container">
+            <div class="minute-digit">
+                <div id="minutesOne" class="digit" >{{minutesOne}}</div>
+                <div id="minutesTwo" class="digit" >{{minutesTwo}}</div>
+            </div>
+            <div class="Minutes">MINUTES</div>
+        </div>
+        <div class="divider">:</div>
+        <div class="second-container">
+            <div class="second">{{second}} </div>
+            <div class="Seconds">SECONDS</div>
+        </div>
     </div>
     <div>
         <app-plus-minus-button  (eventHourOne)= "updateHourOne($event)"

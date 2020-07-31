@@ -1,13 +1,43 @@
 .setTime {
     display: flex;
     justify-content: center;
-    margin: auto;
-    font-size: 10rem;
+    flex-direction: row;
+    font-size: 5rem;;
     color: var(--primary);
 }
 
-app-plus-minus-button {
-    display:flex;
-    justify-content: center;
-    margin-top:2rem;
+.hour-digit, .minute-digit {
+    display: flex;
+    flex-direction: row;
 }
+.divider {
+    margin-top: -55px;
+    padding: 4rem;  
+    font-size: 4rem;
+    color:gray;
+}
+.day-container, .hour-container, .minute-container, .second-container {
+    flex-direction: column;
+}
+
+.Day, .Hours, .Minutes, .Seconds {
+    font-size: 1rem;
+    padding:1rem;
+    color: gray;
+}
+
+app-plus-minus-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+   .setTime {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;;
+    }
+
+  }
