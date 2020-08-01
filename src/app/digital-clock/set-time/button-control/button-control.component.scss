@@ -1,22 +1,19 @@
 .cancelButton, .setAlarmButton {
-    display:flex;
-    justify-content: center;
     position: relative;
-    height: 100px;
-    width:300px;
-    margin:auto;
-    top:50px;
-    color: black;
-    background-color: #f8c296;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    border: 10px solid black;
-    font-size: 30px;
-    font-family: 'Roboto', sans-serif;
+    height: 80px;
+    width: 300px;
+    top: 50px;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
     cursor: pointer;
 }
 
-.alarmSetText{
+.alarmSetText {
     color: black;
     font-size: 30px;
     display: flex;

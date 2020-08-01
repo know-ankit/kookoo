@@ -28,13 +28,12 @@ export class ButtonControlComponent {
       this.audio.load();
       this.audio.play();
       this.soundPlaying = true;
+      this.alarmActive = false;
     }
 
   }
 
   stopAudio() {
-    this.alarmActive = false;
-
     if(this.soundPlaying){
       this.audio.pause();
       this.audio.currentTime = 0;
@@ -58,10 +57,8 @@ export class ButtonControlComponent {
   }
 
   setAlarmStatus() {
-    this.stopAudio();
-    this.IsAlarmSet = true;
-    this.alarmActive = false;
-    
+    this.alarmActive = true;
+    this.IsAlarmSet = false;
   }
 
 }

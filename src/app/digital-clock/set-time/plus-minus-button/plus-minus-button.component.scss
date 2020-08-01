@@ -1,38 +1,14 @@
 .page-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 10rem;
-}
-.bx {
-     font-size: 30px;
-     height:10px;
-     width:40px;
-     color: #f8c296;
-     background-color: black;
-     padding: 20px;
-     cursor: pointer;
-}
-.button:hover {
-    background-color:#f8c296;
+    padding: 8rem;
 }
 
 .plus-hour-button, .minus-hour-button, .plus-minute-button, .minus-minute-button {
-    background-color: var(--primary);
+   margin:15px;
+    height:10px;
+    width:50px;
+    font-size: 40px;
     padding: 20px;
+    background-color: #C380C6 ;
     border: 0;
-}
-.plus-hour-button {
-    right:10px;
-}
-
-.minus-hour-button {
-    left:10px;
-}
-
-.plus-minute-button {
-    left:80px;
-}
-
-.minus-minute-button {
-    left: 100px;
+    cursor: pointer;
 }
