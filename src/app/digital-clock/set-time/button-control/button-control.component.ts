@@ -42,7 +42,6 @@ export class ButtonControlComponent {
   }
 
   alarmInterval() {
-    
     var checkTime = new Date();
 	  var hours = checkTime.getHours();
     var minutes = checkTime.getMinutes();
@@ -68,5 +67,4 @@ export class ButtonControlComponent {
       this.stopAudio();
     }
   }
-
 }
