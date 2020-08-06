@@ -1,5 +1,5 @@
 <div class="page-wrapper">
-    <div class="flex text-6xl">
+    <div class="flex px-56 py-10 m-3 text-6xl bg-black">
         <div class="flex-column">
             <div class="day font-light text-white">{{day}}</div>
             <div class="text-2xl text-gray-700 p-1 font-light">DAY</div>
@@ -27,7 +27,7 @@
         </div>
     </div>
     <div>
-        <app-plus-minus-button  (eventHourOne)= "updateHourOne($event)"
+        <app-plus-minus-button class="flex justify-center px-24"  (eventHourOne)= "updateHourOne($event)"
         (eventHourTwo)= "updateHourTwo($event)" (eventMinuteOne)= "updateMinuteOne($event)"
         (eventMinuteTwo)= "updateMinuteTwo($event)"></app-plus-minus-button>
     </div>

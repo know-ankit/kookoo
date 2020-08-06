@@ -1,11 +1,11 @@
-<div class="flex mt-16 bg-white h-20 w-30">
-     <div class="p-10">        
-         <button class="m-50" (click)="hourIncrement()"><i class='bx bxs-plus-square'></i></button>
-         <button class="minus-hour-button"(click)="hourDecrement()" ><i class='bx bxs-minus-square' ></i></button>
-         <button class="plus-minute-button" (click)="minuteIncrement()"><i class='bx bxs-plus-square'></i></button>
-         <button class="minus-minute-button"(click)="minuteDecrement()"><i class='bx bxs-minus-square' ></i></button>
+<div class="flex-col">
+     <div class="flex justify-between py-12 text-3xl">        
+         <button (click)="hourIncrement()"><span class="bg-black hover:bg-gray-700 text-white font-bold py-3 px-5 m-2 border-transparent border-b-4 border-gray-700" > + </span></button>
+         <button (click)="hourDecrement()" ><span class="bg-black hover:bg-gray-700 text-white font-bold py-3 px-5 m-2 border-transparent border-b-4 border-gray-700" > - </span></button>
+         <button (click)="minuteIncrement()"><span class=" bg-black hover:bg-gray-700 text-white font-bold py-3 px-5 m-2 border-transparent border-b-4 border-gray-700"> + </span></button>
+         <button (click)="minuteDecrement()"><span class="bg-black hover:bg-gray-700 text-white font-bold py-3 px-5 m-2 border-transparent border-b-4 border-gray-700" > - </span></button>
      </div>
      <div>
-         <app-button-control [alarmHours]="alarmHours" [alarmMinutes]="alarmMinutes"></app-button-control>
+         <app-button-control  [alarmHours]="alarmHours" [alarmMinutes]="alarmMinutes"></app-button-control>
     </div>
 </div>
