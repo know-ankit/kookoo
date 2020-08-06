@@ -29,7 +29,4 @@ export class CurrentTimeComponent implements OnInit {
     const seconds = date.getSeconds();
     this.second = seconds < 10 ? '0' + seconds : seconds.toString();
   }
-
-
-
 }

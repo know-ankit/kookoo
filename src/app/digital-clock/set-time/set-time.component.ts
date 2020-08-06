@@ -24,18 +24,13 @@ export class SetTimeComponent implements OnInit{
     }, 1000);
 
     this.day = this.days[this.date.getDay()];
-    console.log('day', this.day);
   }
-
   
-
-  updateSecond(date: Date){
+  updateSecond(date: Date) {
     const seconds = date.getSeconds();
-    console.log('second', seconds);
     this.second = seconds < 10 ? '0' + seconds : seconds.toString();
   }
-
-
+  
   updateHourOne(number) {
 
     this.hoursOne = number;
@@ -55,7 +50,4 @@ export class SetTimeComponent implements OnInit{
     
     this.minutesTwo = number;
   }
-
-
-
 }
