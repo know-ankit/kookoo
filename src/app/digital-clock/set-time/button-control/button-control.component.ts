@@ -34,7 +34,6 @@ export class ButtonControlComponent {
 
   stopAudio() {
     if(this.soundPlaying){
-
       this.audio.pause();
       this.audio.currentTime = 0;
       this.soundPlaying = false;
