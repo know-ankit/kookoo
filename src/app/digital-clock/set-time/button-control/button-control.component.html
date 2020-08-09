@@ -1,7 +1,14 @@
-<button *ngIf="IsAlarmSet" class="setAlarmButton" (click)="setAlarm()">
-    SET ALARM
-</button>
-<div *ngIf="!IsAlarmSet" id="alarmSet">
-    <h1 class="alarmSetText">Alarm is set!</h1>
-    <button class="cancelButton" (click)="setAlarmStatus()">Cancel</button>
+<div class="flex-col justify-center align-items-center bg-gray py-10 px-10">
+    <button *ngIf="IsAlarmSet" class="bg-black text-3xl text-white py-2 px-6" (click)="setAlarm()">
+        SET ALARM
+    </button>
+    <div *ngIf="!IsAlarmSet">
+        <button class="bg-black text-3xl text-white py-2 px-12" (click)="cancelAlarm()">CANCEL</button>
+    </div>
+    <div *ngIf="soundPlaying" >
+        <p class="text-3xl text-black">Wake up!</p>
+        <button class="bg-black text-3xl text-white py-2 px-16" (click)="stopAlarmAndSound()">
+            STOP ALARM
+        </button>
+    </div>
 </div>

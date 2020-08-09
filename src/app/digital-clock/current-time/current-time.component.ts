@@ -10,6 +10,7 @@ export class CurrentTimeComponent implements OnInit {
   public minute: string;
   public second: string;
   public AMPM: string;
+  secondValue:any;
 
  ngOnInit(): void {
     setInterval(()=> {
@@ -17,7 +18,6 @@ export class CurrentTimeComponent implements OnInit {
       this.updateDate(date);
     }, 1000);
   }
-  
   updateDate(date: Date) {
     const hours = date.getHours();
     this.AMPM = hours >= 12 ? 'PM': 'AM';
@@ -29,5 +29,4 @@ export class CurrentTimeComponent implements OnInit {
     const seconds = date.getSeconds();
     this.second = seconds < 10 ? '0' + seconds : seconds.toString();
   }
-
 }

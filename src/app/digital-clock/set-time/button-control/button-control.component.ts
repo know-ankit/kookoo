@@ -33,8 +33,6 @@ export class ButtonControlComponent {
   }
 
   stopAudio() {
-    this.alarmActive = false;
-
     if(this.soundPlaying){
       this.audio.pause();
       this.audio.currentTime = 0;
@@ -48,20 +46,24 @@ export class ButtonControlComponent {
     var minutes = checkTime.getMinutes();
     
     if ((hours == this.alarmHours) && (minutes == this.alarmMinutes )){
-
       this.IsAlarmSet = true;
       this.startAudio();
       this.alarmActive = true;
-      
       clearInterval(this.checkAlarmInterval);
     }
   }
 
-  setAlarmStatus() {
-    this.stopAudio();
+  cancelAlarm() {
     this.IsAlarmSet = true;
-    this.alarmActive = false;
-    
+    this.alarmHours = 0;
+    this.alarmMinutes = 0;
   }
 
+  stopAlarmAndSound(){
+    this.IsAlarmSet = true;
+
+    if(this.soundPlaying){
+      this.stopAudio();
+    }
+  }
 }
