@@ -5,7 +5,7 @@
     <div *ngIf="!IsAlarmSet">
         <button class="bg-black text-3xl text-white py-2 px-12" (click)="cancelAlarm()">CANCEL</button>
     </div>
-    <div *ngIf="soundPlaying" >
+    <div *ngIf="soundPlaying">
         <p class="text-3xl text-black">Wake up!</p>
         <button class="bg-black text-3xl text-white py-2 px-16" (click)="stopAlarmAndSound()">
             STOP ALARM
