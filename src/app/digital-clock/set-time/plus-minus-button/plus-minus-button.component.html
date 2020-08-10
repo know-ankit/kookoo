@@ -1,9 +1,9 @@
-<div class="flex-col sm:bg-purple">
-     <div class="flex justify-between py-12 text-3xl">        
-         <button (click)="hourIncrement()"><span class="bg-black hover:bg-gray-700 text-white font-bold py-3 px-5 m-2 border-transparent border-b-4 border-gray-700" > + </span></button>
-         <button (click)="hourDecrement()" ><span class="bg-black hover:bg-gray-700 text-white font-bold py-3 px-5 m-2 border-transparent border-b-4 border-gray-700" > - </span></button>
-         <button (click)="minuteIncrement()"><span class=" bg-black hover:bg-gray-700 text-white font-bold py-3 px-5 m-2 border-transparent border-b-4 border-gray-700"> + </span></button>
-         <button (click)="minuteDecrement()"><span class="bg-black hover:bg-gray-700 text-white font-bold py-3 px-5 m-2 border-transparent border-b-4 border-gray-700" > - </span></button>
+<div class="flex-col">
+     <div class="flex justify-between py-4 text-3xl sm:text-2xl sm:py-1">        
+         <button (click)="hourIncrement()"><span class="bg-black hover:bg-gray-700 text-white font-bold py-3 px-5 m-2"> + </span></button>
+         <button (click)="hourDecrement()" ><span class="bg-black hover:bg-gray-700 text-white font-bold py-3 px-5 m-2" > - </span></button>
+         <button (click)="minuteIncrement()"><span class=" bg-black hover:bg-gray-700 text-white font-bold py-3 px-5 m-2 "> + </span></button>
+         <button (click)="minuteDecrement()"><span class="bg-black hover:bg-gray-700 text-white font-bold py-3 px-5 m-2" > - </span></button>
      </div>
      <div>
          <app-button-control  [alarmHours]="alarmHours" [alarmMinutes]="alarmMinutes"></app-button-control>

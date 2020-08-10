@@ -1,35 +1,37 @@
-<div class="flex px-56 py-10 m-3 text-6xl bg-black md:flex-col sm:flex-col">
+<div class="flex px-56 py-10 m-3 bg-black md:flex-col sm:flex-col">
         <div class="flex-col sm:text-center md:text-center">
-            <div class="font-light text-white">{{day}}</div>
-            <div class="text-2xl text-gray-700 p-1 font-light">DAY</div>
+            <span class="block font-light text-white text-6xl sm:text-4xl md:text-2xl">{{day}}</span>
+            <span class="block text-4xl text-gray-700 p-1 font-light sm:text-2xl md:text-base">DAY</span>
         </div>
-        <div class="-mt-8 p-8 text-10xl text-gray-700 font-medium sm:hidden md:hidden">:</div>
-        <div class="flex items-stretch">
+        <div class="-mt-8 p-8 text-6xl text-gray-700  sm:hidden md:hidden">:</div>
+        <div class="flex sm:items-stretch">
             <div class="hour-container">
                 <div class="flex font-light text-white">
-                    <span id="hoursOne">{{hoursOne}}</span>
-                    <span id="hoursTwo">{{hoursTwo}}</span>
+                    <span id="hoursOne" class="block text-6xl sm:text-4xl md:text-2xl">{{hoursOne}}</span>
+                    <span id="hoursTwo" class="block text-6xl sm:text-4xl md:text-2xl">{{hoursTwo}}</span>
                 </div>
-                <div class="text-2xl text-gray-700 p-1 font-light">HOURS</div>
+                <span class="block text-4xl text-gray-700 p-1 font-light sm:text-2xl md:text-base">HOURS</span>
+                
             </div>
-            <div class="-mt-8 p-8 text-10xl text-gray-700 font-medium">:</div>
+            <div class="-mt-8 p-8 text-6xl text-gray-700 sm:-mt-12 md:-mt-12">:</div>
             <div class="minute-container">
                 <div class="flex font-light text-white">
-                    <span id="minutesOne">{{minutesOne}}</span>
-                    <span id="minutesTwo">{{minutesTwo}}</span>
+                    <span id="minutesOne" class="block text-6xl sm:text-4xl md:text-2xl">{{minutesOne}}</span>
+                    <span id="minutesTwo" class="block text-6xl sm:text-4xl md:text-2xl">{{minutesTwo}}</span>
                 </div>
-                <div class="text-2xl text-gray-700 p-1 font-light">MINUTES</div>
+                <span class="block text-4xl text-gray-700 p-1 font-light sm:text-2xl md:text-base">MINUTES</span>
+               
             </div>
         </div>
         
-        <div class="-mt-8 p-8 text-10xl text-gray-700 font-medium sm:hidden md:hidden">:</div>
+        <div class="-mt-8 p-8 text-6xl text-gray-700 sm:hidden md:hidden">:</div>
         <div class="flex-col font-light text-white sm:text-center md:text-center">
-            <div class="second">{{second}}</div>
-            <div class="text-2xl text-gray-700 font-light">SECONDS</div>
+            <span class="block text-6xl sm:text-4xl md:text-2xl">{{second}}</span>
+            <span class="block text-gray-700 font-light text-4xl sm:text-2xl md:text-base">SECONDS</span>
         </div>
     </div>
     <div>
-        <app-plus-minus-button class="flex justify-center px-24"  (eventHourOne)= "updateHourOne($event)"
+        <app-plus-minus-button class="flex justify-center" (eventHourOne)= "updateHourOne($event)"
         (eventHourTwo)= "updateHourTwo($event)" (eventMinuteOne)= "updateMinuteOne($event)"
         (eventMinuteTwo)= "updateMinuteTwo($event)"></app-plus-minus-button>
     </div>
