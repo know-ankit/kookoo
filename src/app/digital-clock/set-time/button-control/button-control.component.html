@@ -1,13 +1,13 @@
 <div class="flex-col justify-center align-items-center bg-gray py-10 px-10">
-    <button *ngIf="IsAlarmSet" class="bg-black text-3xl text-white py-2 px-6" (click)="setAlarm()">
+    <button *ngIf="IsAlarmSet" class="bg-black text-3xl text-white py-2 px-6 sm:py-1 md:-mt-2" (click)="setAlarm()">
         SET ALARM
     </button>
     <div *ngIf="!IsAlarmSet">
         <button class="bg-black text-3xl text-white py-2 px-12" (click)="cancelAlarm()">CANCEL</button>
     </div>
-    <div *ngIf="soundPlaying" >
-        <p class="text-3xl text-black">Wake up!</p>
-        <button class="bg-black text-3xl text-white py-2 px-16" (click)="stopAlarmAndSound()">
+    <div *ngIf="soundPlaying">
+        <p class="text-3xl text-black md:text-2xl ">Wake up!</p>
+        <button class="bg-black text-3xl text-white py-2 px-16 sm:py-1 md:py-0" (click)="stopAlarmAndSound()">
             STOP ALARM
         </button>
     </div>

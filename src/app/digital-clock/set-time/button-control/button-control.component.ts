@@ -64,6 +64,8 @@ export class ButtonControlComponent {
 
     if(this.soundPlaying){
       this.stopAudio();
+      this.alarmHours = 0;
+      this.alarmMinutes = 0;
     }
   }
 }
