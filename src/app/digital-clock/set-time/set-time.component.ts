@@ -18,11 +18,6 @@ export class SetTimeComponent implements OnInit{
   date = new Date;
   
   ngOnInit(): void {
-    setInterval(()=> {
-      const date = new Date();
-      this.updateSecond(date);
-    }, 1000);
-
     this.day = this.days[this.date.getDay()];
   }
   
