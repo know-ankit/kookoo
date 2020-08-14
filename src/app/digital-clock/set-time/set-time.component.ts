@@ -26,11 +26,6 @@ export class SetTimeComponent implements OnInit{
     this.day = this.days[this.date.getDay()];
   }
   
-  updateSecond(date: Date) {
-    const seconds = date.getSeconds();
-    this.second = seconds < 10 ? '0' + seconds : seconds.toString();
-  }
-  
   updateHourOne(number) {
 
     this.hoursOne = number;
