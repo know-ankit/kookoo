@@ -1,11 +1,11 @@
-<div class="flex-col">
-     <div class="flex justify-between py-4 text-3xl sm:text-2xl">        
-         <button (click)="hourIncrement()"><span class="shadow-2xl outline-none focus-none bg-black text-white hover:bg-gray-800 font-semibold rounded-full h-16 w-16 py-1 px-4 sm:bg-white sm:text-black"> + </span></button>
-         <button class="outline-none focus-none" (click)="hourDecrement()" ><span class="shadow-2xl  bg-black text-white hover:bg-gray-800 rounded-full h-16 w-16 py-1 px-5 sm:bg-white sm:text-black"> - </span></button>
-         <button (click)="minuteIncrement()"><span class="shadow-2xl outline-none bg-black text-white hover:bg-gray-800 font-semibold rounded-full h-16 w-16 py-1 px-4 sm:bg-white sm:text-black"> + </span></button>
-         <button (click)="minuteDecrement()"><span class="shadow-2xl outline-none bg-black text-white hover:bg-gray-800 font-semibold rounded-full h-16 w-16 py-1 px-5 sm:bg-white sm:text-black"> - </span></button>
+<div class="flex-col sm:-mt-4">
+     <div class="flex justify-around text-3xl sm:text-2xl">        
+         <button class="bg-white text-black text-center focus:outline-none hover:bg-gray-800 hover:text-white rounded-full h-16 w-16 px-4 py-2 m-2" (click)="hourIncrement()"><span> + </span></button>
+         <button class="bg-white text-black text-center focus:outline-none hover:bg-gray-800 hover:text-white rounded-full h-16 w-16 px-4 py-2 m-2" (click)="hourDecrement()" ><span > - </span></button>
+         <button class="bg-white text-black text-center focus:outline-none hover:bg-gray-800 hover:text-white rounded-full h-16 w-16 px-4 py-2 m-2" (click)="minuteIncrement()"><span > + </span></button>
+         <button class="bg-white text-black text-center focus:outline-none hover:bg-gray-800 hover:text-white rounded-full h-16 w-16 px-4 py-2 m-2" (click)="minuteDecrement()"><span > - </span></button>
      </div>
      <div>
-         <app-button-control  [alarmHours]="alarmHours" [alarmMinutes]="alarmMinutes"></app-button-control>
+         <app-button-control [alarmHours]="alarmHours" [alarmMinutes]="alarmMinutes"></app-button-control>
     </div>
 </div>

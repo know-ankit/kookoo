@@ -1,13 +1,13 @@
-<div class="flex-col justify-center align-items-center bg-gray py-10 px-10">
-    <button *ngIf="IsAlarmSet" class="bg-black text-2xl text-white py-2 px-6 sm:py-1 md:-mt-8 sm:bg-white sm:text-black" (click)="setAlarm()">
+<div class="flex-col justify-center py-10 px-20">
+    <button *ngIf="IsAlarmSet" class="bg-white text-2xl text-black focus:outline-none py-2 px-6 sm:py-1 sm:-mt-2 md:-mt-2" (click)="setAlarm()">
         Set Alarm
     </button>
     <div *ngIf="!IsAlarmSet">
-        <button class="bg-black text-2xl text-white py-2 px-10 sm:py-1 md:-mt-4 sm:bg-white sm:text-black" (click)="cancelAlarm()">Cancel</button>
+        <button class="bg-white text-2xl text-black focus:outline-none py-2 px-12 sm:py-1 sm:-mt-2 md:-mt-2" (click)="cancelAlarm()">Cancel</button>
     </div>
     <div *ngIf="soundPlaying">
-        <p class="text-3xl text-black md:text-2xl">Wake up!</p>
-        <button class="bg-black text-2xl text-white py-2 px-16 sm:py-1 md:py-0 md:-mt-3 sm:bg-white sm:text-black" (click)="stopAlarmAndSound()">
+        <p class="animate-pulse text-3xl text-black md:text-2xl sm:py-1 sm:-mt-2 md:-mt-2">Wake up!</p>
+        <button class="bg-white text-2xl text-black focus:outline-none py-2 px-16 sm:py-1 sm:-mt-6 md:py-0" (click)="stopAlarmAndSound()">
             Stop Alarm
         </button>
     </div>

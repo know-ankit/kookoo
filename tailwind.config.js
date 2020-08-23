@@ -12,6 +12,7 @@ module.exports = {
   },
   variants: {
     outline: ['responsive', 'focus'],
+    animation: ['responsive', 'motion-safe', 'motion-reduce']
   },
   plugins: [],
 }
