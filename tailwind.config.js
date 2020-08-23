@@ -10,6 +10,8 @@ module.exports = {
     extend: {
       }
   },
-  variants: {},
+  variants: {
+    outline: ['responsive', 'focus'],
+  },
   plugins: [],
 }
