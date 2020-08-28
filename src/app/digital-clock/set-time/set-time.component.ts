@@ -18,17 +18,7 @@ export class SetTimeComponent implements OnInit{
   date = new Date;
   
   ngOnInit(): void {
-    setInterval(()=> {
-      const date = new Date();
-      this.updateSecond(date);
-    }, 1000);
-
     this.day = this.days[this.date.getDay()];
-  }
-  
-  updateSecond(date: Date) {
-    const seconds = date.getSeconds();
-    this.second = seconds < 10 ? '0' + seconds : seconds.toString();
   }
   
   updateHourOne(number) {
